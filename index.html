@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Five</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img src="sun.jpg" id="sun">
+        <img src="mercury.jpg" id="mercury">
+        <img src="venus.jpg" id="venus">
+        <img src="earth.jpg" id="earth">
+        <img src="earthMoon.png" id="earthMoon">
+        <img src="mars.png" id="mars">
+        <img src="deimos.jpg" id="deimos">
+        <img src="phobos.jpg" id="phobos">
+        <img src="asteroid.jpg" id="asteroid">
+        <img src="jupiter.jpg" id="jupiter">
+        <img src="io.jpg" id="io">
+        <img src="europa.png" id="europa">
+        <img src="ganymede.jpg" id="ganymede">
+        <img src="callisto.jpg" id="callisto">
+        <img src="saturn.jpg" id="saturn">
+        <img src="saturnRing.jpg" id="saturnRing">
+        <img src="titan.png" id="titan">
+        <img src="uranus.jpg" id="uranus">
+        <img src="neptune.jpg" id="neptune">
+        <img src="space.jpg" id="space">
+      </a-assets>
+      
+      <!--Camera Side View-->
+      <a-entity id="cameraWrapper" position="0 0 70">
+        <a-camera>
+          <a-cursor color="yellow" position"0 0 0"></a-cursor>
+        </a-camera>
+      </a-entity>
+      
+      <!--Camera Top View
+      <a-entity id="cameraWrapper" position="0 100 0" rotation="-90 0 0">
+        <a-camera>
+          <a-cursor color="yellow" position"0 0 0"></a-cursor>
+        </a-camera>
+      </a-entity>
+      -->
+    
+      <!--Sun-->
+      <a-sphere src="#sun" radius="3" position="0 0 0" id="sunButton"></a-sphere>
+      
+      <!--Mercury-->
+      <a-entity>
+        <a-sphere src="#mercury" radius="0.4" position="4 0 0">
+          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-sphere>
+        <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+      </a-entity>
+      
+      <!--Venus-->
+      <a-entity>
+        <a-sphere src="#venus" radius="0.9" position="0 0 7">
+          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-sphere>
+        <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+      </a-entity>
+      
+      <!--Earth & Moon-->
+      <a-entity>
+        <a-sphere src="#earth" radius="1" position="0 0 -10">
+          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-sphere>
+        <a-sphere src="#earthMoon" radius="0.25" position="0 .5 -12"></a-sphere>
+        <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+      </a-entity>
+      
+      <!--Mars & 2 Moons-->
+      <a-entity>
+        <a-sphere src="#mars" radius="0.5" position="-15 0 0">
+          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-sphere>
+        <a-sphere src="#deimos" radius="0.1" position="-16 .5 0"></a-sphere>
+        <a-sphere src="#phobos" radius="0.17" position="-15 .5 1"></a-sphere>
+        <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+      </a-entity>
+      
+      <!--Asteroid Belt-->
+      <a-entity>
+        <a-octahedron src="#asteroid" color="#FF926B" radius="1" position="-25 4 0"></a-octahedron>
+        <a-octahedron src="#asteroid" color="#FF926B" radius="1" position="25 3 0"></a-octahedron>
+        <a-octahedron src="#asteroid" color="#FF926B" radius="1" position="-20 -6 0"></a-octahedron>
+        <a-octahedron src="#asteroid" color="#FF926B" radius="1" position="29 2 24"></a-octahedron>
+        <a-octahedron src="#asteroid" color="#FF926B" radius="1" position="-23 -3 21"></a-octahedron>
+        <a-octahedron src="#asteroid" color="#FF926B" radius="1" position="-27 -5 -10"></a-octahedron>
+        <a-octahedron src="#asteroid" color="#FF926B" radius="1" position="21 .5 25"></a-octahedron>
+        <a-octahedron src="#asteroid" color="#FF926B" radius="1" position="27 0 -4"></a-octahedron>
+        <a-octahedron src="#asteroid" color="#FF926B" radius="1" position="-31 6 21"></a-octahedron>
+        <a-octahedron src="#asteroid" color="#FF926B" radius="1" position="29 -1 -20"></a-octahedron>
+        <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+      </a-entity>
+      
+      <!--Jupiter & Galilean Moons-->
+      <a-entity>
+        <a-sphere src="#jupiter" radius="11.2" position="0 0 52">
+          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-sphere>
+        <a-sphere src="#io" radius="1.1" position="0 0 38"></a-sphere>
+        <a-sphere src="#europa" radius="1" position="10 -5 40"></a-sphere>
+        <a-sphere src="#ganymede" radius="1.5" position="-8 -5 40"></a-sphere>
+        <a-sphere src="#callisto" radius="1.3" position="3 5 40"></a-sphere>
+        <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+      </a-entity>
+      
+      <!--Saturn & Titan-->
+      <a-entity>
+        <a-sphere src="#saturn" radius="9.5" position="0 0 -96">
+          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-sphere>
+        <a-ring src="#saturnRing" radius-inner="9.5" radius-outer="15" position="0 0 -96" rotation="60 0 0"></a-ring>
+        <a-sphere src="#titan" radius="2" position="0 0 -84"></a-sphere>
+        <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+      </a-entity>
+      
+      <!--Uranus-->
+      <a-entity>
+        <a-sphere src="#uranus" radius="4" position="-192 0 0">
+          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-sphere>
+        <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+      </a-entity>
+      
+      <!--Neptune-->
+      <a-entity>
+        <a-sphere src="#neptune" radius="3.9" position="301 0 0">
+          <a-animation attribute="rotation" dur="2000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+        </a-sphere>
+        <a-animation attribute="rotation" dur="5000" from="0 0 0" to="0 360 0" repeat="indefinite" delay="0" easing="linear"></a-animation>
+      </a-entity>
+      
+      <!--Background-->
+      <a-sky src="#space"></a-sky>
+      
+      <a-entity>
+              <div id="container">
+
+      </div>
+      </a-entity>
+     
+    </a-scene>
+    <script type="text/javascript" src="projectFive.js"></script>
+  </body>
+</html>
